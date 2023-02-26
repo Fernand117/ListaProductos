@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Funciones para retornar las vistas
+ */
+Route::get('/', [ProductosController::class, 'listaProductos']);
+Route::get('productos/buscar', [ProductosController::class, 'index'])->name('productos.index');
+Route::get('/productos/nuevo', [ProductosController::class, 'create'])->name('productos.create');
+Route::get('/productos/filter', [ProductosController::class, 'filter'])->name('productos.filter');
+
+
+/**
+ * Funciones de controlador que hacen un llamado a la DB
+ */
+Route::post('/productos', [ProductosController::class, 'registrarProductos'])->name('productos.store');
