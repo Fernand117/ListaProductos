@@ -92,6 +92,7 @@
                 <table class="table">
                     <thead class="table-dark">
                     <tr>
+                        <th>Id</th>
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Descripción</th>
@@ -100,6 +101,7 @@
                     <tbody>
                     @forelse ($productos as $producto)
                         <tr>
+                            <td>{{ $producto->id }}</td>
                             <td>{{ $producto->nombre }}</td>
                             <td>$ {{ $producto->precio }} MXN</td>
                             <td>{{ $producto->descripcion }}</td>
