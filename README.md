@@ -2,6 +2,11 @@
 
 Página web que muestra una lista de productos y permite al usuario agregar nuevos productos a la lista. La lista está ordenada alfabéticamente por el nombre del producto, además permite realizar búsqueda y filtrar los productos mediante rango de precios.
 
+<p align="center">
+<br></br>
+<img src="https://raw.githubusercontent.com/Fernand117/ListaProductos/master/ListaProductos/public/proyecto_wallpaper.png">
+</p>
+
 ### Requisitos
 
 - Laravel versión 8
